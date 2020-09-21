@@ -2,7 +2,7 @@ version: "3.7"
 services:
   chaperoo-frontend:
     image: chinenye/chaperoo-frontend:${app_version}
-    build: .
+    build: ./
     ports:
       - target: 80
         published: 80
