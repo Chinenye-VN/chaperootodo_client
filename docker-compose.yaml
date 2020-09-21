@@ -2,17 +2,17 @@ version: "3.7"
 services:
   chaperoo-frontend:
     image: chinenye/chaperoo-frontend:${app_version}
-    build: ./
+    build: .
     ports:
       - target: 80
         published: 80
     depends_on:
       - chaperoo-service
   chaperoo-service:
-    image: chinenye/chaperoo-service
+    image: chinenyevn/chaperoo-service
     depends_on:
       - chaperoo-db
   chaperoo-db:
-    image: chinenye/chaperoo-db
+    image: chinenyevn/chaperoo-db
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
